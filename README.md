@@ -29,7 +29,7 @@ This project covers all key stages of data warehousing:
 
 The project follows the **Medallion Architecture**, consisting of three layers:
 
-[<img src="docs/Data_Architecture.png" width="600" alt="Data Architecture"/>](docs/Data_Architecture.png)
+[<img src="docs/Data_Architecture.png" alt="Data Architecture" width="1000"/>](docs/Data_Architecture.png)
 
 - **Bronze Layer**: Ingests raw data directly from CSV source systems (ERP & CRM) into SQL tables.  
 - **Silver Layer**: Cleansed, standardized, and validated datasets ready for transformation.  
@@ -41,7 +41,7 @@ The project follows the **Medallion Architecture**, consisting of three layers:
 
 The following diagram illustrates how data moves through each stage of the ETL process — from ingestion to transformation and reporting:
 
-[<img src="docs/Data_Flow_Diagram.png" width="600" alt="Data Flow Diagram"/>](docs/Data_Flow_Diagram.png)
+[<img src="docs/Data_Flow_Diagram.png" alt="Data Flow Diagram" width="1000"/>](docs/Data_Flow_Diagram.png)
 
 Key steps include:
 1. Extracting data from CSV files into staging tables.  
@@ -54,7 +54,7 @@ Key steps include:
 
 The **Star Schema** model was designed for efficient analytical queries and reporting. It includes one or more fact tables connected to multiple dimension tables.
 
-[<img src="docs/Data_Model.png" width="600" alt="Data Model"/>](docs/Data_Model.png)
+[<img src="docs/Data_Model.png" alt="Data Model" width="1000"/>](docs/Data_Model.png)
 
 - **Fact Tables**: Contain measurable business metrics such as sales, revenue, or transactions.  
 - **Dimension Tables**: Provide descriptive attributes like customer, product, or region.
@@ -65,7 +65,7 @@ The **Star Schema** model was designed for efficient analytical queries and repo
 
 The **Integration Model** demonstrates how data from multiple source systems (e.g., ERP, CRM) is harmonized into a unified warehouse model.
 
-[<img src="docs/Integration_Model.png" width="600" alt="Integration Model"/>](docs/Integration_Model.png)
+[<img src="docs/Integration_Model.png" alt="Integration Model" width="1000"/>](docs/Integration_Model.png)
 
 This ensures consistent data definitions and supports cross-domain analytics across various data sources.
 
