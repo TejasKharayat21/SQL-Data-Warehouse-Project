@@ -1,64 +1,100 @@
-# Data Warehouse and Analytics Project
+# 🏢 Data Warehouse and Analytics Project (SQL-Based)
 
 Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+This project demonstrates a complete end-to-end **Data Warehousing** and **Analytics** solution, designed and implemented entirely using **SQL**.  
+It showcases the process of transforming raw source data into valuable business insights following modern data engineering best practices.
 
 ---
-## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+## 📘 Project Overview
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+This project covers all key stages of data warehousing:
 
----
-## 📖 Project Overview
+1. **Data Architecture** – Designing a layered data warehouse structure using the **Medallion Architecture (Bronze, Silver, Gold)** approach.  
+2. **Data Flow** – Mapping the data movement and transformation steps from source systems to analytical layers.  
+3. **Data Modeling** – Designing **Star Schema** models with fact and dimension tables optimized for analytical queries.  
+4. **Integration Model** – Combining multiple data sources into a unified, consistent model ready for reporting and analysis.
 
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
+🎯 Ideal for showcasing skills in:
+- SQL Development  
 - Data Engineering  
-- ETL Pipeline Developer  
 - Data Modeling  
-- Data Analytics
+- ETL Design  
+- Data Analytics  
+- Data Architecture  
 
 ---
 
+## 🧱 Data Architecture
 
-## 🚀 Project Requirements
+The project follows the **Medallion Architecture**, consisting of three layers:
 
-### Building the Data Warehouse (Data Engineering)
+[<img src="docs/Data_Architecture.png" width="600" alt="Data Architecture"/>](docs/Data_Architecture.png)
 
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
-
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Bronze Layer**: Ingests raw data directly from CSV source systems (ERP & CRM) into SQL tables.  
+- **Silver Layer**: Cleansed, standardized, and validated datasets ready for transformation.  
+- **Gold Layer**: Business-ready, analytical model built for reporting and insights.
 
 ---
 
-### BI: Analytics & Reporting (Data Analysis)
+## 🔄 Data Flow Diagram
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+The following diagram illustrates how data moves through each stage of the ETL process — from ingestion to transformation and reporting:
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+[<img src="docs/Data_Flow_Diagram.png" width="600" alt="Data Flow Diagram"/>](docs/Data_Flow_Diagram.png)
+
+Key steps include:
+1. Extracting data from CSV files into staging tables.  
+2. Applying transformations (joins, aggregations, deduplication).  
+3. Loading processed data into analytical fact and dimension tables.
+
+---
+
+## 🧩 Data Model
+
+The **Star Schema** model was designed for efficient analytical queries and reporting. It includes one or more fact tables connected to multiple dimension tables.
+
+[<img src="docs/Data_Model.png" width="600" alt="Data Model"/>](docs/Data_Model.png)
+
+- **Fact Tables**: Contain measurable business metrics such as sales, revenue, or transactions.  
+- **Dimension Tables**: Provide descriptive attributes like customer, product, or region.
+
+---
+
+## 🔗 Integration Model
+
+The **Integration Model** demonstrates how data from multiple source systems (e.g., ERP, CRM) is harmonized into a unified warehouse model.
+
+[<img src="docs/Integration_Model.png" width="600" alt="Integration Model"/>](docs/Integration_Model.png)
+
+This ensures consistent data definitions and supports cross-domain analytics across various data sources.
+
+---
+
+## ⚙️ Technical Implementation
+
+### Database:  
+- **SQL Server** (but can be adapted for PostgreSQL, MySQL, or any relational database)
+
+### Key Tasks:
+- Build ETL pipelines purely in SQL (no external ETL tools)  
+- Design schema following best normalization and denormalization practices  
+- Create stored procedures for automated data refresh and transformation  
+- Write analytical SQL queries for KPI generation  
+
+---
+
+## 🧮 Analytical Insights
+
+SQL queries were designed to generate insights such as:
+- **Top-performing products**
+- **Customer retention and churn**
+- **Regional sales trends**
+- **Monthly and yearly sales performance**
+
+These outputs serve as a foundation for dashboards and BI reporting (e.g., Power BI, Tableau).
+
+---
 
 ## 📂 Repository Structure
 ```
@@ -72,7 +108,6 @@ data-warehouse-project/
 │   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
 │   ├── data_flow.drawio                # Draw.io file for the data flow diagram
 │   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
 │   ├── bronze/                         # Scripts for extracting and loading raw data
@@ -84,4 +119,18 @@ data-warehouse-project/
 ├── README.md                           # Project overview and instructions
 ├── LICENSE                             # License information for the repository
 ```
+---
+
+## 🏁 Conclusion
+
+This project highlights the power of SQL in building scalable, analytical data warehouse systems — from raw ingestion to business-ready insights.  
+It’s an excellent demonstration of practical skills in **data modeling**, **data integration**, and **analytical SQL development**.
+
+---
+
+### 👨‍💻 Author  
+**Tejassingh Kharayat**  
+📧 [tejas.kharayat27@gmail.com](mailto:tejas.kharayat27@gmail.com)  
+🌐 [LinkedIn Profile](https://www.linkedin.com/in/tejas-kharayat-a4701b30b/)
+
 ---
