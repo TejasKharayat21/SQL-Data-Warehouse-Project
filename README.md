@@ -29,7 +29,7 @@ This project covers all key stages of data warehousing:
 
 The project follows the **Medallion Architecture**, consisting of three layers:
 
-[<img src="docs/Data_Architecture.png" width="600" alt="Data Architecture"/>](docs/Data_Architecture.png)
+(docs/Data_Architecture.png)
 
 - **Bronze Layer**: Ingests raw data directly from CSV source systems (ERP & CRM) into SQL tables.  
 - **Silver Layer**: Cleansed, standardized, and validated datasets ready for transformation.  
